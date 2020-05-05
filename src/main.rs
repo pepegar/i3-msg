@@ -19,6 +19,7 @@ use nom::number::streaming::{be_u8,be_u16,be_i16,be_u24,be_i24,be_u32,be_f64};
  * | 10             | +SEND_TICK+         | <<_tick_reply,TICK>>                   | Sends a tick event with the specified payload.                                                     |
  * | 11             | +SYNC+              | <<_sync_reply,SYNC>>                   | Sends an i3 sync event with the specified random value to the specified window.                    |
  */
+#[derive(Debug, PartialEq)]
 enum Command {
     RunCommand,
     GetWorkspaces,
